@@ -28,4 +28,4 @@ jobs:
           registry-url: https://registry.npmjs.org/
           
       - name: Install dependencies
-        run: npm --no-git-tag-version version patch
+        run: npm version patch
