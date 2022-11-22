@@ -28,7 +28,7 @@ jobs:
           registry-url: https://registry.npmjs.org/
 
       - name: Patch version
-        run: yarn version patch
+        run: yarn patch-version
         
       - name: Push version
         run: git push --follow-tags
