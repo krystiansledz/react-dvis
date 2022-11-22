@@ -1,5 +1,5 @@
 # This is a name of the workflow
-name: build
+name: version
 # Controls when the workflow will run
 on:
   # Triggers the workflow on published releases
@@ -27,5 +27,8 @@ jobs:
           node-version: 16.x
           registry-url: https://registry.npmjs.org/
 
-      - name: Install dependencies
-        run: yarn --no-git-tag-version version patch
+      - name: Patch version
+        run: yarn version patch
+        
+      - name: Push version
+        run: git push --follow-tags
