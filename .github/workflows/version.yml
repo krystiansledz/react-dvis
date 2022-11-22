@@ -26,6 +26,9 @@ jobs:
           # Node version. Run "node -v" to check the latest version
           node-version: 16.x
           registry-url: https://registry.npmjs.org/
+          
+      - name: Install dependencies
+        run: yarn && yarn install
 
       - name: Patch version
         run: yarn patch-version
