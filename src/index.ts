@@ -1,3 +1,3 @@
-import MyCounter from './components/App';
+import ChartGenerator from './chart/index';
 
-export { MyCounter };
+export { ChartGenerator };
