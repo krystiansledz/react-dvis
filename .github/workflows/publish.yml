@@ -17,6 +17,9 @@ jobs:
       - name: Checkout
         # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
         uses: actions/checkout@v3
+        
+      - name: Bump version
+        run: npm version patch
 
       - name: Setup Node
         # Setup node environment
