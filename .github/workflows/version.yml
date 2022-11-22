@@ -28,10 +28,4 @@ jobs:
           registry-url: https://registry.npmjs.org/
           
       - name: Install dependencies
-        run: yarn && yarn install
-
-      - name: Patch version
-        run: yarn patch-version
-        
-      - name: Push version
-        run: git push --follow-tags
+        run: npm --no-git-tag-version version patch
