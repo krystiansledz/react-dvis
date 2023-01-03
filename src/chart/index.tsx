@@ -15,6 +15,7 @@ const ChartGenerator: React.FC<Props> = ({ data, config }) => {
   return (
     <ChartProvider data={data} config={config}>
       <PageContainer>
+        test
         <Router />
       </PageContainer>
       <ActionBar<ChartStepsPartial> useWizardContext={useChartWizardContext} />
