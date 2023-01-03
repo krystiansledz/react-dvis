@@ -16,6 +16,7 @@ const Router = <WizardStep extends string, StepsPartial>({
 }: Props<WizardStep, StepsPartial>) => {
   return (
     <Routes>
+      {JSON.stringify(routerSteps)}
       {routerSteps.map((step) => (
         <Route
           key={step.step}

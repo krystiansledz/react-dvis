@@ -51,6 +51,7 @@ const ChartWizardAdjustPage: React.FC = () => {
 
   return (
     <Container>
+      ADJUST PAGE
       {formattedData && names && (
         <Row>
           <DataPreview headers={names} rows={formattedData} />

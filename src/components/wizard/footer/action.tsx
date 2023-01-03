@@ -23,6 +23,6 @@ const StyledPaper = styled(Paper)`
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: ${(props) => props.theme.zIndex.appBar};
+  z-index: 1100;
   box-shadow: ${(props) => props.theme.shadows[13]};
 `;
