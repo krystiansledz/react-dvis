@@ -2,7 +2,8 @@
   "include": ["src"],
   "exclude": [
     "dist",
-    "node_modules"
+    "node_modules",
+    "docs"
   ],
   "compilerOptions": {
     "module": "esnext",
@@ -22,5 +23,6 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true
   }
 }
