@@ -10,15 +10,18 @@ import ChartWizardFilterPage from './components/pages/filter';
 import { Routes } from '../routes';
 import React from 'react';
 
-export const getChartStepRoute = (step: ChartWizardStep) => {
-  return `${Routes.ChartCreate(step)}`;
+export const getChartStepRoute = (basePath: string, step: ChartWizardStep) => {
+  return `${basePath}${Routes.ChartCreate(step)}`;
 };
 
-const ChartRouter = () => (
+type Props = {
+  basePath: string;
+};
+
+const ChartRouter: React.FC<Props> = ({ basePath }) => (
   <Router<ChartWizardStep, ChartStepsPartial>
     routerSteps={ChartRouterSteps}
-    appRoute={Routes.Chart()}
-    breadcrumbs={<ChartWizardBreadcrumbs />}
+    breadcrumbs={<ChartWizardBreadcrumbs basePath={basePath} />}
   />
 );
 

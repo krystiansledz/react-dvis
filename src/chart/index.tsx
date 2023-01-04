@@ -9,14 +9,14 @@ import { Config, Data } from './types';
 type Props = {
   data: Data;
   config: Config;
+  basePath?: string;
 };
 
-const ChartGenerator: React.FC<Props> = ({ data, config }) => {
+const ChartGenerator: React.FC<Props> = ({ data, config, basePath = '' }) => {
   return (
-    <ChartProvider data={data} config={config}>
+    <ChartProvider data={data} config={config} basePath={basePath}>
       <PageContainer>
-        test
-        <Router />
+        <Router basePath={basePath} />
       </PageContainer>
       <ActionBar<ChartStepsPartial> useWizardContext={useChartWizardContext} />
     </ChartProvider>

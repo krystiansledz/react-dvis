@@ -6,7 +6,11 @@ import { useChartWizardContext } from '../../context';
 import ChartWizardBreadcrumbsLink from '../../../../components/wizard/breadcrumbs/link';
 import { ChartRouterSteps, getChartStepRoute } from '../../router';
 
-const ChartWizardBreadcrumbs = () => {
+type Props = {
+  basePath: string;
+};
+
+const ChartWizardBreadcrumbs: React.FC<Props> = ({ basePath }) => {
   const { currentStepDetailIndex } = useChartWizardContext();
 
   return (
@@ -14,7 +18,7 @@ const ChartWizardBreadcrumbs = () => {
       {ChartRouterSteps.map((generator, i) => {
         if (!generator.label?.breadcrumb) return null;
 
-        const route = getChartStepRoute(generator.step);
+        const route = getChartStepRoute(basePath, generator.step);
 
         return (
           <ChartWizardBreadcrumbsLink

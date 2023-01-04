@@ -20,9 +20,10 @@ export { useChartWizardContext };
 type Props = React.PropsWithChildren & {
   data: Data;
   config: Config;
+  basePath: string;
 };
 
-const ChartProvider: React.FC<Props> = ({ children, data, config }) => {
+const ChartProvider: React.FC<Props> = ({ children, data, config, basePath }) => {
   const [error, setError] = useState<string>();
 
   // state/reducer
@@ -41,7 +42,7 @@ const ChartProvider: React.FC<Props> = ({ children, data, config }) => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const routes = ChartRouterSteps.map((item) => getChartStepRoute(item.step));
+  const routes = ChartRouterSteps.map((item) => getChartStepRoute(basePath, item.step));
 
   const [currentStepDetailIndex, setCurrentStepDetailIndex] = React.useState(0);
   const currentStepDetail: ChartStepDetail = ChartRouterSteps[currentStepDetailIndex];
