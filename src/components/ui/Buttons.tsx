@@ -1,10 +1,7 @@
 import { faAdd } from '@fortawesome/free-solid-svg-icons/faAdd';
-import { faArrowLeft } from '@fortawesome/free-solid-svg-icons/faArrowLeft';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons/faArrowRight';
 import { faBan } from '@fortawesome/free-solid-svg-icons/faBan';
-import { faEdit } from '@fortawesome/free-solid-svg-icons/faEdit';
 import { faFloppyDisk } from '@fortawesome/free-solid-svg-icons/faFloppyDisk';
-import { faUpload } from '@fortawesome/free-solid-svg-icons/faUpload';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Button from '@mui/material/Button';
 import { ButtonProps } from '@mui/material/Button/Button';
@@ -48,26 +45,8 @@ export const ContinueButton: React.FC<ButtonProps> = ({ children, ...props }) =>
   </DefaultButton>
 );
 
-export const BackButton: React.FC<ButtonProps> = ({ children, ...props }) => (
-  <DefaultButton variant='outlined' startIcon={<FontAwesomeIcon icon={faArrowLeft} />} {...props}>
-    {children}
-  </DefaultButton>
-);
-
 export const CancelButton: React.FC<ButtonProps> = ({ children = 'Cancel', ...props }) => (
   <DefaultButton color='error' variant='outlined' startIcon={<FontAwesomeIcon icon={faBan} />} {...props}>
-    {children}
-  </DefaultButton>
-);
-
-export const EditButton: React.FC<ButtonProps> = ({ children, ...props }) => (
-  <DefaultButton variant='outlined' startIcon={<FontAwesomeIcon icon={faEdit} />} {...props}>
-    {children}
-  </DefaultButton>
-);
-
-export const UploadButton: React.FC<ButtonProps> = ({ children, ...props }) => (
-  <DefaultButton variant='contained' startIcon={<FontAwesomeIcon icon={faUpload} />} {...props}>
     {children}
   </DefaultButton>
 );

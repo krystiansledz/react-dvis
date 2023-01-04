@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { CancelButton, ContinueButton, SaveButton } from '../../ui/buttons';
+import { CancelButton, ContinueButton, SaveButton } from '../../ui/Buttons';
 import FooterActionBar from './action';
 import { Typography } from '@mui/material';
 import { WizardContext } from '../types';

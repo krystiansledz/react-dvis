@@ -4,7 +4,7 @@ import { ControllerRenderProps, useFormContext } from 'react-hook-form';
 import styled from 'styled-components';
 
 import { Props as FileFieldProps } from './index';
-import { CloseIconButton } from '../../ui/icons';
+import { CloseIconButton } from '../../ui/Icons';
 
 export type Props = Omit<FileFieldProps, 'name'> & {
   error?: string;

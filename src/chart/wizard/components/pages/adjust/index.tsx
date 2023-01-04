@@ -3,7 +3,7 @@ import { useChartWizardContext } from '../../../context';
 import TextFormFieldField from '../../../../../components/form/text/field';
 import styled from 'styled-components';
 import { Chip, SelectChangeEvent } from '@mui/material';
-import DataPreview from '../../../../../components/data/preview';
+import DataPreview from '../../../../../components/ui/DataPreview';
 import { Formatters } from '../../../../../utils/format';
 import { ChartStepsKeys } from '../../../schemas';
 import _ from 'lodash';
@@ -51,7 +51,6 @@ const ChartWizardAdjustPage: React.FC = () => {
 
   return (
     <Container>
-      ADJUST PAGE
       {formattedData && names && (
         <Row>
           <DataPreview headers={names} rows={formattedData} />

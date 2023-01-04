@@ -7,11 +7,11 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-import { getDataFromPath } from '../../../utils/data';
+import { getDataFromPath } from '../../utils/data';
 import { Accordion, AccordionDetails, AccordionSummary, Typography } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import styled from 'styled-components';
-import TextMaxLine from '../../TextMaxLines';
+import TextMaxLine from './TextMaxLines';
 
 type Props = {
   headers: Record<string, string>;

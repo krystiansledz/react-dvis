@@ -1,33 +1,27 @@
-import { Breadcrumbs } from '@mui/material';
+import { Breadcrumbs, Typography } from '@mui/material';
 import React from 'react';
 
 import { useChartWizardContext } from '../../context';
 
-import ChartWizardBreadcrumbsLink from '../../../../components/wizard/breadcrumbs/link';
-import { ChartRouterSteps, getChartStepRoute } from '../../router';
+import { ChartRouterSteps } from '../../router';
 
 type Props = {
   basePath: string;
 };
 
-const ChartWizardBreadcrumbs: React.FC<Props> = ({ basePath }) => {
+const ChartWizardBreadcrumbs: React.FC<Props> = () => {
   const { currentStepDetailIndex } = useChartWizardContext();
 
   return (
     <Breadcrumbs>
       {ChartRouterSteps.map((generator, i) => {
         if (!generator.label?.breadcrumb) return null;
-
-        const route = getChartStepRoute(basePath, generator.step);
+        const active = currentStepDetailIndex === i;
 
         return (
-          <ChartWizardBreadcrumbsLink
-            key={generator.step}
-            url={route}
-            label={generator.label.breadcrumb}
-            active={currentStepDetailIndex === i}
-            disabled={i >= currentStepDetailIndex} // disable current and future steps
-          />
+          <Typography key={generator.step} color={active ? 'primary' : undefined}>
+            {generator.label.breadcrumb}
+          </Typography>
         );
       })}
     </Breadcrumbs>

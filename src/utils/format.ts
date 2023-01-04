@@ -192,10 +192,3 @@ export const Formatters: Record<string, Record<string, (value: string) => string
     },
   },
 };
-
-export const DefaultOptions: Record<string, string> = {
-  [Type.BOOLEAN]: BooleanFormatOptions.TRUE_FALSE,
-  [Type.DATE]: DateFormatOptions.DD_MM_YYYY_HH_MM,
-  [Type.NUMBER]: DefaultFormatOption.value,
-  [Type.STRING]: DefaultFormatOption.value,
-};

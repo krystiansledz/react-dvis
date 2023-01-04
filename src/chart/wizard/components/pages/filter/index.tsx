@@ -1,8 +1,8 @@
 import React, { useEffect, useMemo } from 'react';
 import { useChartWizardContext } from '../../../context';
-import DataPreview from '../../../../../components/data/preview';
+import DataPreview from '../../../../../components/ui/DataPreview';
 import { useFieldArray, useForm } from 'react-hook-form';
-import { AddButton, CancelButton } from '../../../../../components/ui/buttons';
+import { AddButton, CancelButton } from '../../../../../components/ui/Buttons';
 import TextFormFieldField from '../../../../../components/form/text/field';
 import { MenuItem, Select } from '@mui/material';
 import styled from 'styled-components';
