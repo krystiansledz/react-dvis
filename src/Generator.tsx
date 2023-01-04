@@ -6,7 +6,7 @@ import redmineConfig from './files/config.json';
 const Generator = () => {
   return (
     <>
-      <ChartGenerator data={fisData.issues} config={redmineConfig} basePath='/package' />
+      <ChartGenerator data={fisData.issues} config={redmineConfig} basePath='/example1' />
     </>
   );
 };
