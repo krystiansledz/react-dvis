@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import { createTheme, CssBaseline, ThemeProvider } from '@mui/material';
 import { LocalizationProvider } from '@mui/x-date-pickers';
 import { AdapterLuxon } from '@mui/x-date-pickers/AdapterLuxon';
@@ -10,7 +10,7 @@ function App() {
   const theme = createTheme({});
 
   return (
-    <HashRouter>
+    <BrowserRouter>
       <LocalizationProvider dateAdapter={AdapterLuxon}>
         <ThemeProvider theme={theme}>
           <CssBaseline />
@@ -19,7 +19,7 @@ function App() {
           </Routes>
         </ThemeProvider>
       </LocalizationProvider>
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 
