@@ -11,7 +11,7 @@ const Generator = () => {
   return (
     <>
       {location.pathname}
-      <ChartGenerator data={fisData.issues} config={redmineConfig} />
+      <ChartGenerator data={fisData.issues} config={redmineConfig} basePath='/package' />
     </>
   );
 };
