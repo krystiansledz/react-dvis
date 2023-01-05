@@ -1,8 +1,11 @@
 import React from 'react';
 import { Divider, Drawer, List, ListItem, ListItemButton, ListItemText } from '@mui/material';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
+import styled from 'styled-components';
 
 const Nav = () => {
+  const location = useLocation();
+
   return (
     <Drawer
       sx={{
@@ -23,9 +26,9 @@ const Nav = () => {
       <List>
         <Link to='/generator'>
           <ListItem disablePadding>
-            <ListItemButton>
+            <StyledButton $active={location.pathname.includes('/generator')}>
               <ListItemText primary='Generator' />
-            </ListItemButton>
+            </StyledButton>
           </ListItem>
         </Link>
       </List>
@@ -37,9 +40,9 @@ const Nav = () => {
         ].map(({ text, path }) => (
           <Link key={path} to={path}>
             <ListItem disablePadding>
-              <ListItemButton>
+              <StyledButton $active={location.pathname.includes(path)}>
                 <ListItemText primary={text} />
-              </ListItemButton>
+              </StyledButton>
             </ListItem>
           </Link>
         ))}
@@ -49,3 +52,7 @@ const Nav = () => {
 };
 
 export default Nav;
+
+const StyledButton = styled(ListItemButton)<{ $active: boolean }>`
+  color: ${({ theme, $active }) => ($active ? theme.palette.primary.main : undefined)};
+`;

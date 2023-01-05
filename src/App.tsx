@@ -4,7 +4,8 @@ import { createTheme, CssBaseline, ThemeProvider } from '@mui/material';
 import { LocalizationProvider } from '@mui/x-date-pickers';
 import { AdapterLuxon } from '@mui/x-date-pickers/AdapterLuxon';
 import { Routes, Route } from 'react-router';
-import Generator from './Generator';
+import Example1 from './Example1';
+import Example2 from './Example2';
 import Nav from './Nav';
 
 function App() {
@@ -34,10 +35,11 @@ function App() {
         <ThemeProvider theme={theme}>
           <CssBaseline />
           <Nav />
-          <div style={{ width: '100%', paddingLeft: '200px', padding: '2rem' }}>
+          <div style={{ width: '100%', padding: '2rem', paddingLeft: '232px' }}>
             <Routes>
-              <Route path={'/'} element={<Generator />} />
-              <Route path={'/example1/*'} element={<Generator />} />
+              <Route path={'/'} element={<Example1 />} />
+              <Route path={'/example1/*'} element={<Example1 />} />
+              <Route path={'/example2/*'} element={<Example2 />} />
             </Routes>
           </div>
         </ThemeProvider>
