@@ -7,6 +7,7 @@ import { Routes, Route } from 'react-router';
 import Example1 from './Example1';
 import Example2 from './Example2';
 import Nav from './Nav';
+import Generator from './generator/wizard';
 
 function App() {
   const theme = createTheme({});
@@ -37,9 +38,9 @@ function App() {
           <Nav />
           <div style={{ width: '100%', padding: '2rem', paddingLeft: '232px' }}>
             <Routes>
-              <Route path={'/'} element={<Example1 />} />
               <Route path={'/example1/*'} element={<Example1 />} />
               <Route path={'/example2/*'} element={<Example2 />} />
+              <Route path={'*'} element={<Generator />} />
             </Routes>
           </div>
         </ThemeProvider>
