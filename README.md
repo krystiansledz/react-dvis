@@ -10,13 +10,13 @@
 ## Installation:
 
 ```bash
-npm install react-dvis --save-dev
+npm install react-dvis
 ```
 
 or
 
 ```bash
-yarn add -D react-dvis
+yarn add react-dvis
 ```
 
 ## Usage :
