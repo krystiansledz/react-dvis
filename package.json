@@ -1,7 +1,7 @@
 {
-  "name": "react-dvis-test",
-  "version": "0.0.12",
-  "description": "React package for data visualisation test",
+  "name": "react-dvis",
+  "version": "1.0.0",
+  "description": "React package for data visualisation",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
   "types": "./dist/esm/index.d.ts",
@@ -78,6 +78,6 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/krystiansledz/react-dvis-test.git"
+    "url": "git+https://github.com/krystiansledz/react-dvis.git"
   }
 }
