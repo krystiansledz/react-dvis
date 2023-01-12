@@ -1,60 +1,97 @@
-# my-react-typescript-package
+# react-dvis
 
 [![NPM version][npm-image]][npm-url]
 [![Build][github-build]][github-build-url]
 ![npm-typescript]
 [![License][github-license]][github-license-url]
 
-This repo is the example of the article ["How to create and publish React Typescript npm package with demo and automated build"](https://medium.com/@igaponov/how-to-create-and-publish-react-typescript-npm-package-with-demo-and-automated-build-80c40ec28aca).
-
-You can clone it and step by step create your own NPM package and publish it.
-
-It is simple React counter.
-
-[**Live Demo**](https://gapon2401.github.io/my-react-typescript-package/)
+[**Live Demo**](https://krystiansledz.github.io/react-dvis/)
 
 ## Installation:
 
 ```bash
-npm install my-react-typescript-package --save-dev
+npm install react-dvis --save-dev
 ```
 
 or
 
 ```bash
-yarn add -D my-react-typescript-package
+yarn add -D react-dvis
 ```
 
 ## Usage :
 
-Add `MyCounter` to your component:
-
 ```js
 import React from 'react'
-import ReactDOM from 'react-dom/client'
-import { MyCounter } from 'my-react-typescript-package'
+import { HashRouter } from 'react-router-dom'
+import { createTheme, ThemeProvider } from '@mui/material'
+import { LocalizationProvider } from 'Amui/x-date-pickers'
+import { AdapterLuxon } from 'Amui/×-date-pickers/AdapterLuxon'
+import { Routes, Route } from 'react-router'
+import { ChartGenerator } from 'react-dvis'
 
-const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
-root.render(
-    <React.StrictMode>
-        <div>
-            <h2>Default counter</h2>
-            <MyCounter />
-        </div>
-        <hr />
-        <div>
-            <h2>Counter with predefined value</h2>
-            <MyCounter value={5} />
-        </div>
-    </React.StrictMode>,
-)
+const data = [
+  {
+    date: '2022-12-13T01:00:00Z',
+    value: 10,
+  },
+  {
+    date: '2022-12-14T01:00:00Z',
+    value: 15,
+  },
+  {
+    date: '2022-12-15T01:00:00Z',
+    value: 13,
+  },
+  {
+    date: '2022-12-16T01:00:00Z',
+    value: 16,
+  }
+]
+
+// generated using Config Generator
+const config = {
+  types: {
+    date: 'DATE',
+    value: 'NUMBER',
+  },
+  names: {
+    date: 'date',
+    value: 'value',
+  },
+  format: {
+    date: 'DD_MM_VYYY',
+    value: 'default',
+  }
+}
+
+function App() {
+  const theme = createTheme({})
+
+  return (
+    <HashRouter>
+      <LocalizationProvider dateAdapter={AdapterLuxon}>
+        <ThemeProvider theme={theme}>
+          <Routes>
+            <Route
+              path="/*" 
+              element={<ChartGenerator data={data} config={config} />}
+            />
+          </Routes>
+        </ThemeProvider>
+      </LocalizationProvider>
+    </HashRouter>
+  )
+}
+
+export default App;
 
 ```
 
-[npm-url]: https://www.npmjs.com/package/my-react-typescript-package
-[npm-image]: https://img.shields.io/npm/v/my-react-typescript-package
-[github-license]: https://img.shields.io/github/license/gapon2401/my-react-typescript-package
-[github-license-url]: https://github.com/gapon2401/my-react-typescript-package/blob/master/LICENSE
-[github-build]: https://github.com/gapon2401/my-react-typescript-package/actions/workflows/publish.yml/badge.svg
-[github-build-url]: https://github.com/gapon2401/my-react-typescript-package/actions/workflows/publish.yml
-[npm-typescript]: https://img.shields.io/npm/types/my-react-typescript-package
+[npm-url]: https://www.npmjs.com/package/react-dvis
+[npm-image]: https://img.shields.io/npm/v/react-dvis
+[github-license]: https://img.shields.io/github/license/krystiansledz/react-dvis
+[github-license-url]: https://github.com/krystiansledz/react-dvis/blob/master/LICENSE
+[github-build]: https://github.com/krystiansledz/react-dvis/actions/workflows/publish.yml/badge.svg
+[github-build-url]: https://github.com/krystiansledz/react-dvis/actions/workflows/publish.yml
+[npm-typescript]: https://img.shields.io/npm/types/react-dvis
