@@ -1,4 +1,4 @@
-import { ChartGenerator } from 'react-dvis-test';
+import { ChartGenerator } from 'react-dvis';
 import React from 'react';
 import data from './files/weather_data.json';
 import config from './files/weather_config.json';

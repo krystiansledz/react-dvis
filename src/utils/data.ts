@@ -1,4 +1,4 @@
-import { DataObject } from 'react-dvis-test/dist/cjs/chart/types';
+import { DataObject } from 'react-dvis/dist/cjs/chart/types';
 
 export const getDataFromPath = (object: Record<string, any>, path: string) => {
   return path

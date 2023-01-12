@@ -1,4 +1,4 @@
-import { ChartGenerator } from 'react-dvis-test';
+import { ChartGenerator } from 'react-dvis';
 import React from 'react';
 import fisData from './files/fis-data.json';
 import redmineConfig from './files/config.json';

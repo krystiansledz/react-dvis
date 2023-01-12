@@ -2,7 +2,7 @@ import _ from 'lodash';
 import * as y from 'yup';
 import { mergeSchemas } from '../../utils/form';
 import { DataType } from '../const';
-import { DataObject } from 'react-dvis-test/dist/cjs/chart/types';
+import { DataObject } from 'react-dvis/dist/cjs/chart/types';
 
 export const LoadStepSchema = y.object({
   data: y

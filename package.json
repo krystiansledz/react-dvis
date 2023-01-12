@@ -1,7 +1,7 @@
 {
-  "name": "react-dvis-test",
-  "version": "0.1.0",
-  "description": "Demo page of react-dvis-test",
+  "name": "react-dvis-gh-pages",
+  "version": "1.0.1",
+  "description": "Demo page of react-dvis",
   "scripts": {
     "start": "parcel src/index.html",
     "build": "parcel build src/index.html --dist-dir docs --public-url .",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/krystiansledz/react-dvis-test.git"
+    "url": "git+https://github.com/krystiansledz/react-dvis.git"
   },
   "keywords": [
     "react",
@@ -34,7 +34,7 @@
     "process": "^0.11.10",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-dvis-test": "^0.0.12",
+    "react-dvis": "^1.0.1",
     "typescript": "^4.9.3"
   },
   "dependencies": {

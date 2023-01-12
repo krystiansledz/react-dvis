@@ -10,7 +10,7 @@ import SelectFormat from './components/format';
 import { getDataFromPath, setValue } from '../../../../../utils/data';
 import _ from 'lodash';
 import { Formatters, DefaultOptions } from '../../../../../utils/format';
-import { DataObject } from 'react-dvis-test/dist/cjs/chart/types';
+import { DataObject } from 'react-dvis/dist/cjs/chart/types';
 
 const GeneratorWizardAdjustPage = () => {
   const { data: contextData, save } = useGeneratorWizardContext();
